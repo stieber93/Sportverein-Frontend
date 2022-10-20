@@ -1,0 +1,186 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:vue/essential",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"parser": "vue-eslint-parser",
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"parser": "@typescript-eslint/parser",
+		"sourceType": "module"
+	},
+	"plugins": ["vue", "@typescript-eslint"],
+	"rules": {
+		//"prettier/prettier": "error",
+		"linebreak-style": "off", //allows CRLF
+		"@typescript-eslint/no-unused-vars": "error", //error when unused imports are existing
+		"no-console": "error", //disallows using console.logs
+		"no-unreachable": "error", //disallows code after return statement
+		"for-direction": "error", //disallows for-index counting in wrong direction
+		"getter-return": "error", //forces a return in getters
+		"no-async-promise-executor": "warn", //warning for example, when an await is in a promise
+		"no-cond-assign": "error", //disallows assignment operators in conditional statements //if(x = 5){}
+		"no-const-assign": "error", //disallow reassigning const variables
+		//"no-constant-binary-expression":"warn", //warning when expressions where the operation doesn't affect the value   //isn't existing, further tests needed
+		"no-constant-condition": "error", //disallows constant expressions in conditions //if(true){}
+		"no-constructor-return": "error", //disallows returning values in constructor
+		"no-debugger": "error", //disallows the use of debugger
+		"no-dupe-args": "error", //disallows duplicate args in function definitions
+		"no-dupe-class-members": "error", //disallows when duplicate name in class members
+		"no-dupe-else-if": "warn", //warning when duplicate conditions in if-chains
+		"no-duplicate-case": "warn", //warning when duplicate conditions in switch cases
+		"no-dupe-keys": "error", //disallows duplicate keys in object literals
+		"no-duplicate-imports": "error", //disallows duplicate imports
+		"no-empty-character-class": "warn", //warning when empty char classes in regex
+		"no-invalid-regexp": "error", //disallows invalid regex paterns
+		"no-loss-of-precision": "error", //disallows number literals that lose precision
+		"no-self-assign": "warn", //warning when assignments where both sides are exactly the same
+		"no-self-compare": "warn", //warning when comparisons where both sides are exactly the same
+		"no-setter-return": "error", //disallows returning values from setters
+		"no-sparse-arrays": "warn", //warning when using sparse arrays //var items = [,,]
+		"no-this-before-super": "error", //disallows use of this. before super() in constructor
+		"no-unmodified-loop-condition": "warn", //warning when using unmodified conditions of loops
+		"use-isnan": "warn", //warning when using NaN instead of isNaN()
+		"camelcase": "error", //enforces camelcase naming convention
+		"curly": "error", //enforces the use of curly braces when writing loop conditions
+		"default-case": "error", //requires a default case in switch statements
+		"default-case-last": "error", //enforces default clauses in switch statements to be last
+		"eqeqeq": "error", //Requires the use of === and !== (instead of == and !=)
+		"max-lines": ["warn", 3500], //warning when file has more than 350 lines
+		"max-lines-per-function": ["warn", 750], // warning when a function has more than 75 lines
+		"no-alert": "error", //disallows the use of alert, confirm, and prompt
+		"no-continue": "warn", //disallows continue statements
+		"no-delete-var": "error", //disallows deleting vars
+		"no-lonely-if": "error", //disallows if statements as the only statement in else blocks -> use "else if"
+		"no-multi-assign": "error", //disallows use of chained assignment expressions -> use let a = 0; \n let b = 0;
+		"no-multi-str": "off", //allows multiline strings
+		"no-plusplus": "off", //allows unary operators ++ and --
+		"no-redeclare": "error", // disallows variable redeclaration
+		"no-return-assign": "warn", //disallows assignment operators in return statements
+		"no-return-await": "error", // disallows unnecessary return await
+		//"no-shadow": "error", // warning when variable declarations from shadowing variables declared in the outer scope
+		"@typescript-eslint/no-shadow": ["error"],
+		"no-shadow-restricted-names": "error", // disallows identifiers from shadowing restricted names
+		"no-undef-init": "off", // allows initializing variables to undefined
+		"no-unused-expressions": "error", //disallows unused expressions
+		"no-unused-labels": "warn", // disallow unused labels
+		"no-useless-catch": "warn", // the name says it
+		"@typescript-eslint/no-useless-constructor": "warn", // flags class constructors that are useless
+		"no-useless-escape": "error", // disallows unnecessary characters
+		"no-useless-rename": "warn", // disallows renaming import, export, and destructured assignments to the same name.
+		"no-useless-return": "warn", // the name says it
+		"no-var": "error", // disallows usage of var to declarate a variable (because var ist creating global variable)
+		"prefer-const": "error", // requires const for vaiables that are never reassigned
+		"require-await": "error", // disallows async functions without await       !!can cause problems, turn this setting to "warn" if needed
+		"yoda": "error", // in a condition you have to put the variable first like if( var === "something")
+		"@typescript-eslint/no-var-requires": "off", //caused issues with reqiure()
+		"multiline-comment-style": ["error", "bare-block"], //error when not using following multiline-commentstyle
+		/* this is an example
+        for multiline-comments */
+		"@typescript-eslint/ban-types": "off",
+		"@typescript-eslint/no-explicit-any": "off",
+		"no-mixed-spaces-and-tabs": "warn",
+
+		//vue specific
+		"vue/component-definition-name-casing": ["error", "PascalCase"], // enforce PascalCase for Component Naming
+		"vue/html-end-tags": "error", // enforces developer to close html tags
+
+		"vue/no-template-shadow": "error", // disallows shadowing
+		"vue/no-mutating-props": "off",
+		"vue/one-component-per-file": "error", //enforce that each component should be in its own file
+		"vue/prop-name-casing": "error", // enforce property names to be in camelCase
+		"vue/attributes-order": [
+			"error",
+			{
+				//enforces the specified order of html attributes
+				"order": [
+					"DEFINITION",
+					"LIST_RENDERING",
+					"CONDITIONALS",
+					"RENDER_MODIFIERS",
+					"GLOBAL",
+					["UNIQUE", "SLOT"],
+					"TWO_WAY_BINDING",
+					"OTHER_DIRECTIVES",
+					"OTHER_ATTR",
+					"EVENTS",
+					"CONTENT"
+				],
+				"alphabetical": false
+			}
+		],
+		"vue/component-tags-order": [
+			"error",
+			{
+				// first: <template> or <script> and then <style>
+				"order": [["script", "template"], "style"]
+			}
+		],
+		"vue/block-lang": [
+			"error", //forces to specify used language in script and stlye
+			{
+				"script": {
+					"lang": "ts"
+				},
+				"style": {
+					"lang": "scss"
+				}
+			}
+		],
+		"vue/custom-event-name-casing": ["warn", "camelCase"], //events have to be in camelCase
+		/* <! ignored --> 
+         <! 
+            forced linebreak
+            if multiline html comment
+         --> 
+        */
+		"vue/html-comment-content-newline": [
+			"error",
+			{
+				"singleline": "ignore",
+				"multiline": "ignore"
+			}
+		],
+		"vue/valid-template-root": "off", // turned off to allow empty <template>
+
+		"vue/no-restricted-html-elements": [
+			//warning if html elements were used
+			"off",
+			{
+				"element": "button",
+				"message": "Prefer use of our custom <AppButton /> component"
+			},
+			{
+				"element": "marquee",
+				"message": "Do not use deprecated HTML tags"
+			}
+		],
+		"vue/no-v-text": "error", // enforces to use moustaches {{}}
+		"vue/padding-line-between-blocks": ["error", "always"], // free line between <template> <script> ans <style>
+		"vue/static-class-names-order": "error", // class names in alphabetic order
+		"vue/v-for-delimiter-style": ["error", "in"], // use "in" instead of "of"
+		"vue/v-on-function-call": ["warn", "always"], // enforces to use brackets when calling a function
+
+		//vue styling
+		"vue/v-bind-style": ["error", "shorthand"], // forces to use : instead of v-bind:
+		"vue/v-on-style": ["error", "shorthand"], // forces to use @click instead of v-on:click
+		"vue/v-slot-style": ["error", "shorthand"], // forces to use # instead of slot
+		"no-restricted-imports": [
+			"error",
+			{
+				//error when using src as import-statement
+				"patterns": [
+					{
+						"group": ["src/*"],
+						"message": "Use relative imports instead!"
+					}
+				]
+			}
+		]
+	}
+}

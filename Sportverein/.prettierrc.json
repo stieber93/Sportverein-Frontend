@@ -1,1 +1,16 @@
-{}
+{
+    "printWidth": 100,
+    "semi": true,
+    "bracketSameLine": false,
+    "bracketSpacing": false,    
+    "arrowParens": "always",
+    "embeddedLanguageFormatting": "auto",
+    "htmlWhitespaceSensitivity": "strict",    
+    "jsxSingleQuote": false,
+    "singleQuote": false,
+    "trailingComma": "es5",
+    "useTabs": true,
+    "tabWidth": 4,
+    "vueIndentScriptAndStyle": true,
+    "beautify.ignore": [ "/*.js", "/*.jsx", "/*.vue"]
+}
