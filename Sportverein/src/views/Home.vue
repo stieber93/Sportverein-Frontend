@@ -1,8 +1,12 @@
 <template>
-    <div>test</div>
+    <div>
+        <NavBar></NavBar>
+    </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+    import NavBar from "@/components/defaultComponents/navBar.vue";
+</script>
 
 <style scoped>
     @import "@/styles/views/home.css";

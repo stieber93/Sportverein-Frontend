@@ -127,9 +127,6 @@
 				"script": {
 					"lang": "ts"
 				},
-				"style": {
-					"lang": "scss"
-				}
 			}
 		],
 		"vue/custom-event-name-casing": ["warn", "camelCase"], //events have to be in camelCase

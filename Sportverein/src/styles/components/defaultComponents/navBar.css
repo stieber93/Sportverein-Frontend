@@ -1,0 +1,51 @@
+.navBarWrapper {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 25vw;
+    margin-top: 3vh;
+    background-color: violet;
+    width: 50vw;
+    height: 6vh;
+    border-radius: 10vh;
+}
+
+.navBarContent {
+    justify-content: center;
+    margin-inline: auto;
+}
+
+.navBarContent > .logo {
+    top: -3vh;
+}
+
+.navBarContent  .athlete, .navBarContent .sport {
+    font-size: 24px;
+    color: black;
+    display: flex;
+}
+
+.athlete {
+    float: left;
+    margin-right: 30px;
+}
+
+.athlete:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.sport {
+    float: right;
+    margin-left: 30px;
+}
+
+.sport:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.logo {
+    width: calc(309px / 4);
+    height: calc(424px / 4);
+}
