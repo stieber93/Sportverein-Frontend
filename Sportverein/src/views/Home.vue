@@ -2,6 +2,8 @@
     <div>test</div>
 </template>
 
-<script lang="ts"></script>
+<script setup lang="ts"></script>
 
-<style scoped lang="scss"></style>
+<style scoped>
+    @import "@/styles/views/home.css";
+</style>
