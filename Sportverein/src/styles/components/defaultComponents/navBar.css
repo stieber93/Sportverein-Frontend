@@ -1,51 +1,56 @@
 .navBarWrapper {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 25vw;
-    margin-top: 3vh;
-    background-color: violet;
-    width: 50vw;
-    height: 6vh;
-    border-radius: 10vh;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 25vw;
+	margin-top: 3vh;
+	background-color: violet;
+	width: 50vw;
+	height: 6vh;
+	border-radius: 10vh;
 }
 
 .navBarContent {
-    justify-content: center;
-    margin-inline: auto;
+	justify-content: center;
+	margin: auto;
 }
 
-.navBarContent > .logo {
-    top: -3vh;
-}
-
-.navBarContent  .athlete, .navBarContent .sport {
-    font-size: 24px;
-    color: black;
-    display: flex;
+.navBarContent .athlete,
+.navBarContent .sport {
+	font-size: 24px;
+	color: black;
+	margin-top: 8px; /* isn't centering perfectly, but pretty close to it (on default laptop) */
 }
 
 .athlete {
-    float: left;
-    margin-right: 30px;
+	float: left;
+	margin-right: 30px;
+	text-decoration: none;
 }
 
 .athlete:hover {
-    background-color: transparent;
-    text-decoration: underline;
+	background-color: transparent;
+	text-decoration: underline;
 }
 
 .sport {
-    float: right;
-    margin-left: 30px;
+	float: right;
+	margin-left: 30px;
+	text-decoration: none;
 }
 
 .sport:hover {
-    background-color: transparent;
-    text-decoration: underline;
+	background-color: transparent;
+	text-decoration: underline;
 }
 
 .logo {
-    width: calc(309px / 4);
-    height: calc(424px / 4);
+	top: -3vh;
+	position: relative;
+	width: calc(309px / 4);
+	height: calc(424px / 4);
+}
+
+.logo:hover {
+	filter: invert(32%) sepia(1%) saturate(2443%) hue-rotate(2deg) brightness(93%) contrast(85%);
 }
