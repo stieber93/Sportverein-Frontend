@@ -1,4 +1,53 @@
 .contentArea {
-	margin-top: 20vh;
-	margin-inline: 40vh;
+	margin-top: 15vh; /* navBar space */
+	margin-bottom: 6vh; /* Footer space */
+	margin-inline: 1.5vw;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 25px;
+}
+
+.gridBox {
+	border: 3px solid hotpink;
+}
+
+/* Grid Positions in 3x3 Grid */
+/* //bottom right */
+.slot3_3-3_3 {
+	grid-row-start: 3;
+	grid-column-start: 3;
+	grid-row-end: 3;
+	grid-column-end: 3;
+}
+
+/* //top left - mid left */
+.slot1_1-2_1 {
+	grid-row-start: 1;
+	grid-column-start: 1;
+	grid-row-end: 3;
+	grid-column-end: 1;
+}
+/* //top middle - top right */
+.slot1_2-1_3 {
+	grid-row-start: 1;
+	grid-column-start: 2;
+	grid-row-end: 1;
+	grid-column-end: 4;
+}
+/* //mid middle - mid right */
+.slot2_2-2_3 {
+	grid-row-start: 2;
+	grid-column-start: 2;
+	grid-row-end: 2;
+	grid-column-end: 4;
+}
+
+/* //bot left- bot middle */
+.slot3_1-3_2 {
+	grid-row-start: 3;
+	grid-column-start: 1;
+	grid-row-end: 3;
+	grid-column-end: 3;
 }

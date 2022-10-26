@@ -1,0 +1,15 @@
+.footerWrapper {
+	display: flex;
+	position: fixed;
+	z-index: 999;
+	bottom: 0;
+	background-color: violet;
+	width: 100vw;
+	height: 5vh;
+}
+
+.footerContent {
+	justify-content: center;
+	margin: auto;
+	font-size: 14px;
+}

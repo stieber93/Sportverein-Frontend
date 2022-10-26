@@ -1,7 +1,12 @@
 <template>
 	<div class="contentBoxWrapper">
 		<div class="boxHeader" :class="{borderBottom: showBody}" @click="toogleBody">
-			<button class="headerIcon">{{ headerIcon }}</button>
+			<Icon
+				class="headerIcon"
+				:class="{turnIcon: showBody}"
+				icon="ep:arrow-down-bold"
+				color="black"
+			></Icon>
 			<span class="headerText">{{ headerName }}</span>
 		</div>
 		<Transition name="bodyHeight">
@@ -14,6 +19,7 @@
 
 <script setup lang="ts">
 	import {ref} from "vue";
+	import {Icon} from "@iconify/vue"; // get Icons from here: https://icones.js.org/
 
 	const props = defineProps({
 		headerName: {
@@ -26,15 +32,9 @@
 	});
 
 	const showBody = ref(false);
-	const headerIcon = ref("+");
 
 	function toogleBody() {
 		showBody.value = !showBody.value;
-		if (headerIcon.value === "+") {
-			headerIcon.value = "-";
-		} else {
-			headerIcon.value = "+";
-		}
 	}
 </script>
 

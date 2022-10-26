@@ -1,9 +1,16 @@
-.navBarWrapper {
-	display: flex;
-	position: fixed;
+.navBarArea {
+	width: 100vw;
+	height: 15vh;
 	top: 0;
+	background-color: white;
+	position: fixed;
+	z-index: 999;
+}
+.navBarWrapper {
+	position: relative;
+	display: flex;
+	top: 3vh;
 	left: 25vw;
-	margin-top: 3vh;
 	background-color: violet;
 	width: 50vw;
 	height: 6vh;
