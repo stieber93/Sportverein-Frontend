@@ -1,53 +1,111 @@
+.addButton {
+	position: absolute;
+	top: 3vh;
+	left: 95vw;
+	z-index: 500;
+	width: 3vw;
+	aspect-ratio: 1;
+	background-color: #d291bc;
+	color: black;
+	font-size: 30px;
+	border: none;
+	border-radius: 50%;
+}
+.addButton:hover {
+	transform: scale(1.15);
+	transition: 0.25s ease-in-out;
+}
+
 .contentArea {
 	margin-top: 15vh; /* navBar space */
 	margin-bottom: 6vh; /* Footer space */
 	margin-inline: 1.5vw;
+	height: calc(100vh - 15vh - 6vh);
 
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
-	gap: 25px;
+	grid-template-rows: 38vh 38vh;
+	gap: 3vh;
 }
 
 .gridBox {
-	border: 3px solid hotpink;
+	border: 3px solid #d291bc;
+	padding-inline: 1vw;
+	padding-block: 1vh;
+	border-radius: 15px;
 }
 
-/* Grid Positions in 3x3 Grid */
+/* Grid Positions in 2x3 Grid */
+/* 1 2 3
+   4 5 6 */
 /* //bottom right */
-.slot3_3-3_3 {
-	grid-row-start: 3;
+.slot1_1-1_1 {
+	grid-row-start: 1;
+	grid-column-start: 1;
+	grid-row-end: 1;
+	grid-column-end: 1;
+}
+/* //top mid */
+.slot1_2-1_2 {
+	grid-row-start: 1;
+	grid-column-start: 2;
+	grid-row-end: 1;
+	grid-column-end: 2;
+}
+/* //top right */
+.slot1_3-1_3 {
+	grid-row-start: 1;
 	grid-column-start: 3;
-	grid-row-end: 3;
+	grid-row-end: 1;
+	grid-column-end: 3;
+}
+/* //bottom left */
+.slot2_1-2_1 {
+	grid-row-start: 2;
+	grid-column-start: 1;
+	grid-row-end: 2;
+	grid-column-end: 1;
+}
+/* //bottom mid */
+.slot2_2-2_2 {
+	grid-row-start: 2;
+	grid-column-start: 2;
+	grid-row-end: 2;
+	grid-column-end: 2;
+}
+/* //bottom right */
+.slot2_3-2_3 {
+	grid-row-start: 2;
+	grid-column-start: 3;
+	grid-row-end: 2;
 	grid-column-end: 3;
 }
 
-/* //top left - mid left */
-.slot1_1-2_1 {
+/* //top left - top mid */
+.slot1_1-1_2 {
 	grid-row-start: 1;
 	grid-column-start: 1;
-	grid-row-end: 3;
-	grid-column-end: 1;
+	grid-row-end: 1;
+	grid-column-end: 3;
 }
-/* //top middle - top right */
+/* //top mid - top right */
 .slot1_2-1_3 {
 	grid-row-start: 1;
 	grid-column-start: 2;
 	grid-row-end: 1;
 	grid-column-end: 4;
 }
-/* //mid middle - mid right */
+/* //bottom mid - bottom right */
 .slot2_2-2_3 {
 	grid-row-start: 2;
 	grid-column-start: 2;
 	grid-row-end: 2;
 	grid-column-end: 4;
 }
-
-/* //bot left- bot middle */
-.slot3_1-3_2 {
-	grid-row-start: 3;
+/* //top left - bottom left */
+.slot1_1-2_1 {
+	grid-row-start: 1;
 	grid-column-start: 1;
 	grid-row-end: 3;
-	grid-column-end: 3;
+	grid-column-end: 1;
 }

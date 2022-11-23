@@ -97,3 +97,11 @@ $neutral-medal: #d1d7da;
 	border-color: darken(#fc402d, 10%) darken(#fc402d, 10%) transparent darken(#fc402d, 10%);
 	transform: rotate(-20deg) translateZ(-48px);
 }
+
+.transformSilver {
+	transform: translateY(3vh);
+}
+
+.transformBronze {
+	transform: translateY(6vh);
+}

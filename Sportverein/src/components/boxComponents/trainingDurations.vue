@@ -1,9 +1,7 @@
 <template>
-	<div>
-		<!-- <div>Trainingsdauer gesamt: <span>122 Stunden</span></div>
-		<div>Trainingsdauer letztes Jahr: <span>32 Stunden</span></div>
-		<div>Traningsdauer letzter Monat: <span>3 Stunden</span></div> -->
-		<div><BarChart /></div>
+	<div class="wrapper">
+		<h4>Trainingszeiten:</h4>
+		<div class="barChart"><BarChart /></div>
 	</div>
 </template>
 
@@ -11,4 +9,18 @@
 	import BarChart from "@/components/charts/barChart";
 </script>
 
-<style scoped></style>
+<style scoped>
+	.wrapper {
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+	}
+
+	h4 {
+		border-bottom: 1px solid violet;
+	}
+
+	.barChart {
+		margin: auto;
+	}
+</style>

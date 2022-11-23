@@ -1,66 +1,42 @@
 <template>
 	<div>
 		<NavBar></NavBar>
+		<Button class="addButton"><b>+</b></Button>
 		<div class="contentArea">
-			<div class="gridBox slot1_1-2_1">
-				<div>Sportler:</div>
-				<div>Name: Mustermann</div>
-				<div>Vorname: Max</div>
-				<hr />
-				<div>ausführende Sportarten:</div>
-				<ul>
-					<li>100m Lauf</li>
-					<li>200m Lauf</li>
-					<li>400m Lauf</li>
-					<li>110m Hürdenlauf</li>
-				</ul>
+			<div class="gridBox slot1_1-1_1">
+				<div class="wrapper">
+					<h4>Wählen Sie eine Sportart:</h4>
+					<div class="innerWrapper"></div>
+				</div>
 			</div>
-			<div class="gridBox slot1_2-1_3"><TrainingSessions></TrainingSessions></div>
+			<div class="gridBox slot2_1-2_1"><TrainingSessions></TrainingSessions></div>
 			<div class="gridBox slot2_2-2_3"><TrainingDurations></TrainingDurations></div>
-			<div class="gridBox slot3_1-3_2">
-				<div class="medals">
-					<div class="quiz-medal">
-						<div class="quiz-medal__circle quiz-medal__circle--silver">
-							<span> 2 </span>
+			<div class="gridBox slot1_3-1_3">
+				<div class="wrapper">
+					<h4>Beste Platzirung in einer Sportart:</h4>
+					<div class="innerWrapper">
+						<div class="medals">
+							<div class="quiz-medal">
+								<div class="quiz-medal__circle quiz-medal__circle--gold">
+									<span> 1 </span>
+								</div>
+								<div class="quiz-medal__ribbon quiz-medal__ribbon--left"></div>
+								<div class="quiz-medal__ribbon quiz-medal__ribbon--right"></div>
+							</div>
 						</div>
-						<div class="quiz-medal__ribbon quiz-medal__ribbon--left"></div>
-						<div class="quiz-medal__ribbon quiz-medal__ribbon--right"></div>
 					</div>
-					<div class="quiz-medal">
-						<div class="quiz-medal__circle quiz-medal__circle--gold">
-							<span> 1 </span>
-						</div>
-						<div class="quiz-medal__ribbon quiz-medal__ribbon--left"></div>
-						<div class="quiz-medal__ribbon quiz-medal__ribbon--right"></div>
-					</div>
-					<div class="quiz-medal">
-						<div class="quiz-medal__circle quiz-medal__circle--bronze">
-							<span> 3 </span>
-						</div>
-						<div class="quiz-medal__ribbon quiz-medal__ribbon--left"></div>
-						<div class="quiz-medal__ribbon quiz-medal__ribbon--right"></div>
-					</div>
-				</div>
-				<div>
-					<span
-						>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;100m Lauf: Top 3%
-						&emsp;&emsp;&emsp;&emsp;</span
-					>
-					<span
-						>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;200m Lauf: Top
-						50&emsp;&emsp;&emsp;&emsp;</span
-					>
-					<span
-						>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;110m Hürdenlauf Lauf: Top
-						9%&emsp;&emsp;&emsp;&emsp;</span
-					>
 				</div>
 			</div>
-			<div class="gridBox slot3_3-3_3">
-				<div>Durchschnittlichte Trainingsdauer: ⌀76 Minuten pro Einheit</div>
-				<div>Trainingszeit gesamt: 432 Stunden und 17 Minuten</div>
-				<div>Meist Trainierte Sportart: 200m Lauf (137 Stunden)</div>
-				<div>letzter Leistungsanstieg: 110m Hürdenlauf um 7% am 26.10.2022</div>
+			<div class="gridBox slot1_2-1_2">
+				<div class="wrapper">
+					<h4>Allgemeine Informatinen:</h4>
+					<div class="innerWrapper">
+						<div>Durchschnittlichte Trainingsdauer: ⌀76 Minuten pro Einheit</div>
+						<div>Trainingszeit gesamt: 432 Stunden und 17 Minuten</div>
+						<div>Meist Trainierte Sportart: 200m Lauf (137 Stunden)</div>
+						<div>letzter Leistungsanstieg: 110m Hürdenlauf um 7% am 26.10.2022</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<Footer></Footer>
@@ -79,4 +55,19 @@
 <style scoped lang="scss">
 	@import "@/styles/views/home.css";
 	@import "@/styles/components/utils/medals.scss";
+
+	.wrapper {
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+	}
+
+	h4 {
+		border-bottom: 1px solid violet;
+	}
+	.innerWrapper {
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+	}
 </style>

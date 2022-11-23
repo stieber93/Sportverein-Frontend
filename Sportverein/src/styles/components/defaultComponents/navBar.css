@@ -4,14 +4,14 @@
 	top: 0;
 	background-color: white;
 	position: fixed;
-	z-index: 999;
+	z-index: 400;
 }
 .navBarWrapper {
 	position: relative;
 	display: flex;
 	top: 3vh;
 	left: 25vw;
-	background-color: violet;
+	background-color: #d291bc;
 	width: 50vw;
 	height: 6vh;
 	border-radius: 10vh;
