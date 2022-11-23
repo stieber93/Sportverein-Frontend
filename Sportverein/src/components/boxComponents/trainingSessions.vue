@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-	import DoughnutChart from "@/components/boxComponents/doughnutChart";
+	import DoughnutChart from "@/components/charts/doughnutChart";
 </script>
 
 <style scoped>

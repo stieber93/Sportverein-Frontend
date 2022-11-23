@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<NavBar></NavBar>
-		<div class="contentArea"> </div>
+		<div class="contentArea"></div>
 		<Footer></Footer>
 	</div>
 </template>
@@ -11,6 +11,7 @@
 	import Footer from "@/components/defaultComponents/Footer.vue";
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 	@import "@/styles/views/home.css";
+	@import "@/styles/components/utils/medals.scss";
 </style>

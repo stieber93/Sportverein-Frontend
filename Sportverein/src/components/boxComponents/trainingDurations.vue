@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-	import BarChart from "@/components/boxComponents/barChart";
+	import BarChart from "@/components/charts/barChart";
 </script>
 
 <style scoped></style>
