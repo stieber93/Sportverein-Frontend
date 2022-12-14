@@ -1,25 +1,25 @@
+//general file imports
 import {defineComponent, h} from "vue";
 import type {PropType} from "vue";
+//chart specific vue-chart.js import
 import {Bar} from "vue-chartjs";
-import {
-	Chart as ChartJS,
-	Title,
-	Tooltip,
-	Legend,
-	BarElement,
-	CategoryScale,
-	LinearScale,
-} from "chart.js";
+//needed chart.js part imports
+import {Chart as ChartJS, Title, Legend, BarElement} from "chart.js";
 
-ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale);
+//register parts, which are needed for this specific chart
+ChartJS.register(Title, Legend, BarElement);
 
-ChartJS.defaults.plugins.legend.display = false;
-//ChartJS.defaults.plugins.title.display = true;
-//ChartJS.defaults.plugins.title.text = "Trainingsstunden vergangender Zeträume";
+//toogle visisbility of certain parts
+ChartJS.defaults.plugins.legend.display = false; /* default true */
+//ChartJS.defaults.plugins.title.display = true; /* default false  --> maybe useful for other charts */
 
+//define chart here in export to call it from other destinations with wanted features via props
 export default defineComponent({
+	//name of the chart
 	name: "BarChart",
+	//typ of the chart
 	components: {Bar},
+	//defines values via vue props (when no prop is given, use default value)
 	props: {
 		chartId: {
 			type: String,
@@ -34,27 +34,34 @@ export default defineComponent({
 			default: 200,
 		},
 		cssClasses: {
-			default: "",
 			type: String,
+			default: "",
 		},
 		styles: {
 			type: Object as PropType<Partial<CSSStyleDeclaration>>,
-			default: () => {},
+			default: {},
 		},
 	},
 	setup(props) {
+		//set chartData (while in testing phase: directly set values)
 		const chartData = {
+			//labels = description texts for a specific bar
 			labels: ["Gesamt", "2022", "Nov. 2022"],
+			//datasets = values for a specific bar
 			datasets: [
 				{
+					//unit
 					label: "Trainingsstunden",
+					//values
 					data: [122, 32, 6],
+					//colors of bar in hex-code
 					backgroundColor: ["#d291bc", "#e8c7dd", "#f3e3ee"],
 				},
 			],
 		};
-
-		const chartOptions = {responsive: true, maintainAspectRatio: false};
+		//set chart responive (resized when window is resized), with consistent aspect ratio
+		const chartOptions = {responsive: true, maintainAspectRatio: true};
+		//return chart with set options in this file and from given props
 		return () =>
 			h(Bar, {
 				chartOptions,
