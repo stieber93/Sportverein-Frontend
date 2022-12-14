@@ -54,11 +54,7 @@ export default defineComponent({
 			datasets: [
 				{
 					data: [312, 109, 9],
-					backgroundColor: [
-						"rgb(255, 99, 132)",
-						"rgb(54, 162, 235)",
-						"rgb(255, 205, 86)",
-					],
+					backgroundColor: ["#d291bc", "#e8c7dd", "#f3e3ee"],
 					//hoverOffset: 4,
 				},
 			],

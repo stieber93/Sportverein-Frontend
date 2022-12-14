@@ -49,7 +49,7 @@ export default defineComponent({
 				{
 					label: "Trainingsstunden",
 					data: [122, 32, 6],
-					backgroundColor: ["violet", "pink", "hotpink"],
+					backgroundColor: ["#d291bc", "#e8c7dd", "#f3e3ee"],
 				},
 			],
 		};

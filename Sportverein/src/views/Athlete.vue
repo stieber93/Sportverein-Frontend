@@ -4,16 +4,13 @@
 		<Button class="addButton"><b>+</b></Button>
 		<div class="contentArea">
 			<div class="gridBox slot1_1-1_1">
-				<div class="wrapper">
-					<h4>Wählen Sie eine Sportart:</h4>
-					<div class="innerWrapper"></div>
-				</div>
+				<ChooseAthlete></ChooseAthlete>
 			</div>
 			<div class="gridBox slot2_1-2_1"><TrainingSessions></TrainingSessions></div>
 			<div class="gridBox slot2_2-2_3"><TrainingDurations></TrainingDurations></div>
 			<div class="gridBox slot1_3-1_3">
 				<div class="wrapper">
-					<h4>Beste Platzirung in einer Sportart:</h4>
+					<h4>Beste Platzierung in einer Sportart:</h4>
 					<div class="innerWrapper">
 						<div class="medals">
 							<div class="quiz-medal">
@@ -50,6 +47,7 @@
 	// Imports boxComponents here and use them as selectedComponent in contentBoxes !
 	import TrainingSessions from "@/components/boxComponents/trainingSessions.vue";
 	import TrainingDurations from "@/components/boxComponents/trainingDurations.vue";
+	import ChooseAthlete from "@/components/boxComponents/chooseAthlete.vue";
 </script>
 
 <style scoped lang="scss">
