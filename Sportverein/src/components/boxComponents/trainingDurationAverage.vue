@@ -4,9 +4,11 @@
 		<div class="innerWrapper"
 			><div class="left">
 				<ul class="list">
-					<li>Fußball: <span>5,2h</span></li>
-					<li>Basketball: <span>4,1h</span></li>
-					<li>100m Sprint: <span>2,3h</span></li>
+					<li>100m Sprint: <span>9,0</span></li>
+					<li>110m Hürden: <span>7,6</span></li>
+					<li>Weitsprung: <span>6,4</span></li>
+					<li>Hochsprung: <span>4,2</span></li>
+					<li>Speerwerfen: <span>1,4</span></li>
 				</ul>
 			</div>
 			<div class="right"><AverageDurationDoughnutChart :width="150" :height="150" /></div>

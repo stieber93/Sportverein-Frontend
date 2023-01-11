@@ -56,9 +56,11 @@ export default defineComponent({
 					//values
 					data: [2, 2, 3, 4, 4, 7, 13, 35, 67, 89, 90, 78, 103, 140, 127, 99, 87, 56, 45, 23, 20, 11, 4, 2],
 					//colors of bar in hex-code
-					backgroundColor: ["#d291bc", "#e8c7dd", "#f3e3ee", "#d291bc", "#e8c7dd", "#f3e3ee", "#d291bc", "#e8c7dd", "#f3e3ee", "#d291bc",
-					"#e8c7dd", "#f3e3ee", "#d291bc", "#e8c7dd", "#f3e3ee", "#d291bc", "#e8c7dd", "#f3e3ee","#d291bc", "#e8c7dd", "#f3e3ee", "#d291bc",
-					"#e8c7dd", "#f3e3ee"],
+					backgroundColor: ["#F997B1", "#FFA49C", "#FFBA83", "#FFD870", "#F9F871", 
+					"#FFD870", "#FFBA83", "#FFA49C", "#F997B1", "#D291BC", 
+					"#F997B1", "#FFA49C", "#FFBA83", "#FFD870", "#F9F871", 
+					"#FFD870", "#FFBA83", "#FFA49C", "#F997B1", "#D291BC", 
+					"#F997B1", "#FFA49C", "#FFBA83", "#FFD870"],
 				},
 			],
 		};

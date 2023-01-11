@@ -4,9 +4,11 @@
 		<div class="innerWrapper"
 			><div class="left">
 				<ul class="list">
-					<li>Fußball: <span>87</span></li>
-					<li>Basketball: <span>56</span></li>
-					<li>100m Sprint: <span>32</span></li>
+					<li>100m Sprint: <span>82</span></li>
+					<li>110m Hürden: <span>45</span></li>
+					<li>Weitsprung: <span>28</span></li>
+					<li>Hochsprung: <span>27</span></li>
+					<li>Speerwerfen: <span>7</span></li>
 				</ul>
 			</div>
 			<div class="right"> <SportsDoughnutChart :width="150" :height="150" /> </div

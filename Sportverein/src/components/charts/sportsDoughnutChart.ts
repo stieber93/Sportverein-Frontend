@@ -50,11 +50,11 @@ export default defineComponent({
 	},
 	setup(props) {
 		const chartData = {
-			labels: ["Fußball", "Basketball", "100m Spprint"],
+			labels: ["100m Sprint", "110m Hürden", "Weitsprung", "Hochsprung", "Speerwerfen"],
 			datasets: [
 				{
-					data: [87, 56, 32],
-					backgroundColor: ["#d291bc", "#e8c7dd", "#f3e3ee"],
+					data: [82, 61, 45, 28, 27],
+					backgroundColor: ["#D291BC", "#F997B1", "#FFA49C", "#FFBA83", "#FFD870"],
 					//hoverOffset: 4,
 				},
 			],
