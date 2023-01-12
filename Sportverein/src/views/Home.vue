@@ -1,7 +1,12 @@
 <template>
 	<div>
+		<createModal
+			v-if="isCreateModalVisible"
+			@close="isCreateModalVisible = false"
+			createModalHeader="Überschrift"
+		></createModal>
 		<NavBar></NavBar>
-		<Button class="addButton"><b>+</b></Button>
+		<Button class="addButton" @click="toggleCreateModal()"><b>+</b></Button>
 		<div class="contentArea">
 			<div class="gridBox slot1_3-1_3">
 				Sportler & Sportarten gesamt
@@ -28,6 +33,14 @@
 <script setup lang="ts">
 	import NavBar from "@/components/defaultComponents/navBar.vue";
 	import Footer from "@/components/defaultComponents/Footer.vue";
+	import createModal from "@/components/defaultComponents/createModal.vue";
+	import { ref } from "vue";
+
+	const isCreateModalVisible = ref(false);
+
+	function toggleCreateModal() {
+		isCreateModalVisible.value = !isCreateModalVisible.value;
+	}
 </script>
 
 <style scoped>
