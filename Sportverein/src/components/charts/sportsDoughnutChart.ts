@@ -19,6 +19,8 @@ ChartJS.defaults.plugins.title.display = true;
 ChartJS.defaults.plugins.title.position = "top";
 ChartJS.defaults.plugins.title.text = "Anzahl Traningseinheiten im Zeitraum X"; */
 
+
+
 export default defineComponent({
 	name: "SportsDoughnutChart",
 	components: {Doughnut},
@@ -42,6 +44,14 @@ export default defineComponent({
 		styles: {
 			type: Object as PropType<Partial<CSSStyleDeclaration>>,
 			default: () => {},
+		},
+		optionsArray: {
+			type: Array as PropType<String[]>,
+			default: () => [],
+		},
+		valuesArray: {
+			type: Array as PropType<number[]>,
+			default: () => [],
 		} /* 
 		plugins: {
 			type: Object as PropType<Plugin<"bar">>,
@@ -50,10 +60,10 @@ export default defineComponent({
 	},
 	setup(props) {
 		const chartData = {
-			labels: ["100m Sprint", "110m Hürden", "Weitsprung", "Hochsprung", "Speerwerfen"],
+			labels: [props.optionsArray[0], props.optionsArray[1], props.optionsArray[2], props.optionsArray[3], props.optionsArray[4]],
 			datasets: [
 				{
-					data: [82, 61, 45, 28, 27],
+					data: [props.valuesArray[0], props.valuesArray[1], props.valuesArray[2], props.valuesArray[3], props.valuesArray[4]],
 					backgroundColor: ["#D291BC", "#F997B1", "#FFA49C", "#FFBA83", "#FFD870"],
 					//hoverOffset: 4,
 				},
@@ -70,6 +80,8 @@ export default defineComponent({
 				height: props.height,
 				cssClasses: props.cssClasses,
 				styles: props.styles,
+				optionsArray: props.optionsArray,
+				valuesArray: props.valuesArray,
 				//plugins: props.plugins,
 			});
 	},
