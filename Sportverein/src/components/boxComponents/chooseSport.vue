@@ -1,25 +1,25 @@
 <template>
 	<div class="wrapper">
-		<h4>Wählen Sie einen Sportler:</h4>
+		<h4>Wählen Sie eine Sportart:</h4>
 		<div class="innerWrapper">
 			<input class="chooseContent" type="text" list="athleteList" />
 			<datalist id="athleteList">
 				<option v-for="object in athleteList">{{ object }}</option>
 			</datalist>
-			<h5>Ausführende Sportarten:</h5>
+			<h5>Details:</h5>
 
 			<ul>
-				<li>○ 100m Lauf</li>
-				<li>○ 110m Hürdenaluf</li>
-				<li>○ 200m Lauf</li>
-				<li>○ und 4 weitere Sportarten...</li>
+				<li>○ Ausführende Sportler: 27</li>
+				<li>○ Bestleistwert: 10.19sek</li>
+				<li>○ Trainings/Woche: 15</li>
+				<li>○ Traningsstunden/Woche: 48h</li>
 			</ul>
 		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
-	const athleteList = ["insgesamt", "Steffen Reuter", "Thomas Schädler", "Gero Lucas Panzer"];
+	const athleteList = ["alle", "100m Lauf", "200m Lauf", "800m Lauf"];
 </script>
 
 <style scoped>
