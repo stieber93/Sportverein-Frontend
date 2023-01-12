@@ -6,11 +6,15 @@
 				<div class="left">
 					<div class="medals">
 						<div class="quiz-medal">
-							<div class="quiz-medal__circle quiz-medal__circle--gold">
-								<span style="font-size: 15px"> Top 5% </span>
+							<div class="quiz-medal-content">
+								<div class="quiz-medal__circle quiz-medal__circle--gold">
+									<span style="font-size: 15px"> Top 5% </span>
+								</div>
+								<div class="quiz-medal__ribbons">
+									<div class="quiz-medal__ribbon quiz-medal__ribbon--left"></div>
+									<div class="quiz-medal__ribbon quiz-medal__ribbon--right"></div>
+								</div>
 							</div>
-							<div class="quiz-medal__ribbon quiz-medal__ribbon--left"></div>
-							<div class="quiz-medal__ribbon quiz-medal__ribbon--right"></div>
 						</div>
 					</div>
 				</div>
