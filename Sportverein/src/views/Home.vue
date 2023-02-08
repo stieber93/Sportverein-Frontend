@@ -1,7 +1,11 @@
 <template>
 	<div>
+		<createModal
+			v-if="isCreateModalVisible"
+			@close="isCreateModalVisible = false"
+		></createModal>
 		<NavBar></NavBar>
-		<Button class="addButton"><b>+</b></Button>
+		<Button class="addButton" @click="toggleCreateModal()"><b>+</b></Button>
 		<div class="contentArea">
 			<div class="gridBox slot1_3-1_3">
 				<SportsMembers></SportsMembers>
@@ -42,6 +46,14 @@
 	import SportsMembers from "@/components/boxComponents/sportsMembers.vue";
 	import TrainingTimesTotal from "@/components/boxComponents/trainingTimesTotal.vue";
 	import TrainingDurationAverage from "@/components/boxComponents/trainingDurationAverage.vue";
+	import createModal from "@/components/defaultComponents/createModal.vue";
+	import {onMounted, ref} from "vue";
+
+	const isCreateModalVisible = ref(false);
+
+	function toggleCreateModal() {
+		isCreateModalVisible.value = !isCreateModalVisible.value;
+	}
 </script>
 
 <style scoped>
