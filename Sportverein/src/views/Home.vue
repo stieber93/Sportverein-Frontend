@@ -3,7 +3,6 @@
 		<createModal
 			v-if="isCreateModalVisible"
 			@close="isCreateModalVisible = false"
-			:createModalHeader= createModalHeadValue
 		></createModal>
 		<NavBar></NavBar>
 		<Button class="addButton" @click="toggleCreateModal()"><b>+</b></Button>
@@ -34,11 +33,9 @@
 	import NavBar from "@/components/defaultComponents/navBar.vue";
 	import Footer from "@/components/defaultComponents/Footer.vue";
 	import createModal from "@/components/defaultComponents/createModal.vue";
-	import { ref } from "vue";
+	import { onMounted, ref } from "vue";
 
 	const isCreateModalVisible = ref(false);
-	const createModalHeadValue = ref("Sportler erstellen");
-	const whichToCreate = ref("athlete");
 
 	function toggleCreateModal() {
 		isCreateModalVisible.value = !isCreateModalVisible.value;

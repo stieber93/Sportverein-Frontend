@@ -1,8 +1,8 @@
 <template>
     <div class="aroundCreateModal">
-        <button class="createModalHeaderAreaButton">Sportler erstellen</button>
-        <button class="createModalHeaderAreaButton">Sportart erstellen</button>
-        <button class="createModalHeaderAreaButton">Trainingseinheit erstellen</button>
+        <button class="createModalHeaderAreaButton" @click="showCreateAthleteModal()">Sportler erstellen</button>
+        <button class="createModalHeaderAreaButton" @click="showCreateSportModal()">Sportart erstellen</button>
+        <button class="createModalHeaderAreaButton" @click="showCreateTrainingSessionModal()">Trainingseinheit erstellen</button>
         <div class="createModalWrapper">
             <div class="createModalHeaderArea">
                 <div class="createModalHeader">{{ createModalHeader }}</div>
@@ -25,10 +25,39 @@
 
 <script setup lang="ts">
     import DefaultButton from "@/components/defaultComponents/defaultButton.vue";
+    import { ref, onMounted } from "vue";
 
-    const props = defineProps({
-        createModalHeader: String,
+    const createModalHeader = ref("");
+    const whichToCreate = ref("athlete");
+
+    onMounted(() => {
+        switchCreateModal()
     })
+
+    function showCreateAthleteModal() {
+        whichToCreate.value = "athlete";
+        switchCreateModal();
+    }
+
+    function showCreateSportModal() {
+        whichToCreate.value = "sport";
+        switchCreateModal();
+    }
+
+    function showCreateTrainingSessionModal() {
+        whichToCreate.value = "trainingSession";
+        switchCreateModal();
+    }
+
+    function switchCreateModal() {
+        if (whichToCreate.value === "athlete") {
+            createModalHeader.value = "Sportler erstellen"
+        } else if (whichToCreate.value === "sport") {
+            createModalHeader.value = "Sportart erstellen"
+        } else if (whichToCreate.value === "trainingSession") {
+            createModalHeader.value = "Trainingseinheit erstellen"
+        }
+    }
 </script>
 
 <style scoped>
