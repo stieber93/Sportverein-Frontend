@@ -2,7 +2,14 @@
 	<div class="wrapper">
 		<h4>Wählen Sie eine Sportart:</h4>
 		<div class="innerWrapper">
-			<input class="chooseContent" type="text" list="athleteList" />
+			<input
+				id="selectedSport"
+				class="chooseContent"
+				type="text"
+				list="athleteList"
+				v-model="selectedSport"
+				@change="selectSport()"
+			/>
 			<datalist id="athleteList">
 				<option v-for="object in sportList">{{ object.name }}</option>
 			</datalist>
@@ -29,6 +36,7 @@
 	import {getAllSports} from "@/services/sport.service";
 	import {getAllPerformances} from "@/services/performance.service";
 	import {getAllTrainingSessions} from "@/services/training-session.service";
+	import {currentSelections} from "@/stores/currentSelections";
 	const athletes = ref([] as Athlete[]);
 	const sports = ref([] as Sport[]);
 	const performances = ref([] as Performance[]);
@@ -52,6 +60,20 @@
 			}
 		}
 	);
+	let selectedSport = ref("");
+	const selectionStore = currentSelections();
+	function selectSport() {
+		const selected = sports.value.find((sport: Sport) => {
+			if (sport.title === selectedSport.value) {
+				return sport;
+			}
+		});
+		if (selected) {
+			selectionStore.setSportId(selected.id);
+		} else {
+			selectionStore.setSportId(0);
+		}
+	}
 </script>
 
 <style scoped>
