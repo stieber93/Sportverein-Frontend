@@ -4,7 +4,7 @@
 		<div class="innerWrapper">
 			<input class="chooseContent" type="text" list="athleteList" />
 			<datalist id="athleteList">
-				<option v-for="object in athleteList">{{ object }}</option>
+				<option v-for="object in sportList">{{ object.name }}</option>
 			</datalist>
 			<h5>Details:</h5>
 
@@ -19,7 +19,39 @@
 </template>
 
 <script setup lang="ts">
-	const athleteList = ["alle", "100m Lauf", "200m Lauf", "800m Lauf"];
+	//Get Data
+	import {ref, watch} from "vue";
+	import type {Athlete} from "@/models/athlete.model";
+	import type {Sport} from "@/models/sport.model";
+	import type {Performance} from "@/models/performance.model";
+	import type {TrainingSession} from "@/models/training-session.model";
+	import {getAllAthletes} from "@/services/athlete.service";
+	import {getAllSports} from "@/services/sport.service";
+	import {getAllPerformances} from "@/services/performance.service";
+	import {getAllTrainingSessions} from "@/services/training-session.service";
+	const athletes = ref([] as Athlete[]);
+	const sports = ref([] as Sport[]);
+	const performances = ref([] as Performance[]);
+	const trainingSessions = ref([] as TrainingSession[]);
+	getAllData();
+	async function getAllData() {
+		athletes.value = await getAllAthletes();
+		sports.value = await getAllSports();
+		performances.value = await getAllPerformances();
+		trainingSessions.value = await getAllTrainingSessions();
+	}
+	const sportList = ref([{id: 0, name: "alle"}]);
+	watch(
+		() => sports.value,
+		() => {
+			for (let i = 0; i < sports.value.length; i++) {
+				sportList.value.push({
+					id: sports.value[i].id,
+					name: sports.value[i].title,
+				});
+			}
+		}
+	);
 </script>
 
 <style scoped>
