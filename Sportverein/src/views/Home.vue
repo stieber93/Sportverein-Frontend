@@ -3,7 +3,7 @@
 		<createModal
 			v-if="isCreateModalVisible"
 			@close="isCreateModalVisible = false"
-			createModalHeader="Überschrift"
+			:createModalHeader= createModalHeadValue
 		></createModal>
 		<NavBar></NavBar>
 		<Button class="addButton" @click="toggleCreateModal()"><b>+</b></Button>
@@ -37,6 +37,8 @@
 	import { ref } from "vue";
 
 	const isCreateModalVisible = ref(false);
+	const createModalHeadValue = ref("Sportler erstellen");
+	const whichToCreate = ref("athlete");
 
 	function toggleCreateModal() {
 		isCreateModalVisible.value = !isCreateModalVisible.value;
