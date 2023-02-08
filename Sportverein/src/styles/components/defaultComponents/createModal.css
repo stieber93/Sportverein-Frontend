@@ -22,12 +22,69 @@
     background-color: white;
     border: 2px solid black;
     border-radius: 10px;
+    z-index: 1001;
 }
 
 .createModalHeaderArea {
     width: 100%;
     height: 4vh;
     border-bottom: 2px solid black;
+}
+
+.createModalInputArea {
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+}
+
+.inputForAthlete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputForAthlete input {
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+.inputForAthlete span {
+    width: 50%;
+}
+
+.inputForSport {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputForSport input {
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+.inputForSport span {
+    width: 50%;
+}
+
+.inputForTrainingSession {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputForTrainingSession input {
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+.inputForTrainingSession select {
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+.inputForTrainingSession span {
+    width: 50%;
 }
 
 .createModalHeaderAreaButton {
@@ -41,10 +98,14 @@
 }
 
 .createModalButtons {
-    position: relative;
+    position: absolute;
     /* width: 100%; */
-    top: 80%;
-    float: right;
+    top: 88%;
+    left:58%;
+}
+
+.createModalButtons * {
+  display: inline-block;
 }
 
 .createModalHeader {
