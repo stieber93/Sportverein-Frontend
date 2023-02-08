@@ -1,7 +1,7 @@
 <template>
 	<div class="wrapper">
 		<h4>Trainierende nach Uhrzeit:</h4>
-		<TrainingTimesBarChart></TrainingTimesBarChart>
+		<div class="TrainingTimesBarChart"><TrainingTimesBarChart /></div>
 	</div>
 </template>
 
@@ -20,7 +20,7 @@
 		border-bottom: 1px solid violet;
 	}
 
-	.barChart {
+	.TrainingTimesBarChart {
 		margin: auto;
 	}
 </style>

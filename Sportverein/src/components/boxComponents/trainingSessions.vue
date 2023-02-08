@@ -6,7 +6,8 @@
 				<ul class="list">
 					<li>gesamt: <span>312</span></li>
 					<li>letztes Jahr: <span>109</span></li>
-					<li>letzter Monat: <span>9</span></li>
+					<li>letzter Monat: <span>13</span></li>
+					<li>aktueller Monat: <span>6</span></li>
 				</ul>
 			</div>
 			<div class="right"> <DoughnutChart :width="150" :height="150" /> </div
