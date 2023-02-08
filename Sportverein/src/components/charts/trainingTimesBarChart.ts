@@ -16,14 +16,14 @@ ChartJS.defaults.plugins.legend.display = false; /* default true */
 //define chart here in export to call it from other destinations with wanted features via props
 export default defineComponent({
 	//name of the chart
-	name: "BarChart",
+	name: "TrainingTimesBarChart",
 	//typ of the chart
 	components: {Bar},
 	//defines values via vue props (when no prop is given, use default value)
 	props: {
 		chartId: {
 			type: String,
-			default: "bar-chart",
+			default: "training-times-bar-chart",
 		},
 		width: {
 			type: Number,

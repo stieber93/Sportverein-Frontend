@@ -46,16 +46,16 @@ export default defineComponent({
 		//set chartData (while in testing phase: directly set values)
 		const chartData = {
 			//labels = description texts for a specific bar
-			labels: ["Gesamt", "2022", "Nov. 2022"],
+			labels: ["Gesamt", "2022", "Nov. 2022", "aktueller Monat"],
 			//datasets = values for a specific bar
 			datasets: [
 				{
 					//unit
 					label: "Trainingsstunden",
 					//values
-					data: [122, 32, 6],
+					data: [122, 32, 8, 4],
 					//colors of bar in hex-code
-					backgroundColor: ["#d291bc", "#e8c7dd", "#f3e3ee"],
+					backgroundColor: ["#D291BC", "#F997B1", "#FFBA83", "#F9F871"],
 				},
 			],
 		};

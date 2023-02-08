@@ -50,11 +50,11 @@ export default defineComponent({
 	},
 	setup(props) {
 		const chartData = {
-			labels: ["Gesamt", "2022", "Nov. 2022"],
+			labels: ["Gesamt", "2022", "Nov. 2022", "Aktueller Monat"],
 			datasets: [
 				{
-					data: [312, 109, 9],
-					backgroundColor: ["#d291bc", "#e8c7dd", "#f3e3ee"],
+					data: [312, 109, 13, 6],
+					backgroundColor: ["#D291BC", "#F997B1", "#FFBA83", "#F9F871"],
 					//hoverOffset: 4,
 				},
 			],
